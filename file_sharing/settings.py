@@ -30,8 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1', 
-    '192.168.1.16',  # Your specific IP
-    '192.168.1.*',   # Allows all IPs in your local network subnet
+    '*',
+    # '192.168.1.16',  # Your specific IP
+    # '192.168.1.*',   # Allows all IPs in your local network subnet
 ]
 
 
@@ -181,10 +182,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHARED_FOLDER = get_downloads_folder()
 
 # Dynamic allowed hosts
-ALLOWED_HOSTS = [
-    'localhost', 
-    '127.0.0.1'
-]
+# ALLOWED_HOSTS = [
+#     'localhost', 
+#     '127.0.0.1'
+# ]
 
 # Try to add local IP addresses
 try:
