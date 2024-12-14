@@ -1,0 +1,20 @@
+<!-- templates/files/request_access.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Device Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h2>Request Device Access</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="device_name">Device Name:</label>
+            <input type="text" id="device_name" name="device_name" required 
+                   placeholder="Enter device name (e.g. John's Laptop)">
+        </div>
+        <button type="submit">Request Access</button>
+    </form>
+</body>
+</html>

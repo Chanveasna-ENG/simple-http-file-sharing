@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Sharing Server</title>
+</head>
+<body>
+    <h1>Shared Folder</h1>
+    
+    <!-- File Upload Form -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+    
+    <!-- File List -->
+    <h2>Available Files:</h2>
+    <ul>
+    {% for file in files %}
+        <li>
+            {{ file }} 
+            <a href="{% url 'download_file' file %}">Download</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
